@@ -117,3 +117,41 @@ print(11111111)
 print(11_111_111)
 print(+11_111-11)
 
+# octal (zero-o ou zero-O)
+print(0o123)
+
+# hexadecimal (zero-x ou zero-X)
+print(0x123)
+
+# floats - padrão [inteiro].[fração]
+print(2.3)
+print(.4)
+print(4.)
+
+# Quando quiser usar números muito grandes ou muito pequenos, pode usar notação científica.
+# 3 x 10E8 -> 3E8 - o expoente (o valor após o E) deve ser um número inteiro
+print(3E8)
+
+# Constante de Planck 6.62607 x 10e-34
+print(6.62607E-34)
+
+# O Python escolhe sempre a forma económica de apresentação do número
+print(0.0000000000000000000001)
+
+# Strings
+
+print("I like \"Monty Python\"")
+print('I like "Monty Python"')
+
+print('I\'m Monty Python')
+
+# Booleanos - 'True' ou 'False'
+# Não se pode mudar nada — incluindo case-sensitivity.
+# True é tradado com 1 em comparações e 0 como False
+print(True > 1)
+print(1 < False)
+
+print('"I\'m"\n""learning""\n"""Python"""')
+print(0b1011)
+
+
