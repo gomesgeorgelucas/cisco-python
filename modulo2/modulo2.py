@@ -207,3 +207,68 @@ print(+2)
 # O resultado mostra claramente que o operador de exponenciação
 # utiliza a ligação do lado direito.
 print(2 ** 2 ** 3)
+
+# Variáveis:
+
+# o nome da variável deve ser composto por letras maiúsculas ou minúsculas,
+# dígitos e o caratere _ (underscore)
+# o nome da variável deve começar com uma letra;
+# o caratere underscore é uma letra;
+# letras maiúsculas e minúsculas são tratadas como diferentes
+# (um pouco diferente do que no mundo real - Alice e ALICE são os mesmos nomes próprios,
+# mas em Python são dois nomes de variáveis diferentes, e consequentemente, duas variáveis diferentes);
+# o nome da variável não deve ser nenhuma das palavras reservadas de Python
+# (as keywords - explicaremos mais sobre isto em breve).
+# Além disso, o Python permite-lhe utilizar não só letras latinas mas também carateres
+# específicos de línguas que utilizam outros alfabetos.
+
+# Uma variável passa a existir como o resultado da atribuição de um valor a ela.
+# Ao contrário de outras linguagens, não precisa de a declarar de nenhuma forma especial.
+# Se atribuir qualquer valor a uma variável inexistente, a variável será automaticamente criada.
+# Não precisa de fazer mais nada.
+var = "1"
+print("Text " + var)
+
+a = 3.0
+b = 4.0
+c = (a ** 2 + b ** 2) ** 0.5
+print("c =", c)
+
+john = 3
+mary = 5
+adam = 6
+
+print(john, mary, adam, sep=",")
+total_apples = john + mary + adam
+print(total_apples)
+
+kilometers = 12.25
+miles = 7.38
+
+miles_to_kilometers = miles * 1.61
+kilometers_to_miles = kilometers / 1.61
+
+print(miles, "miles is", round(miles_to_kilometers, 2), "kilometers")
+print(kilometers, "kilometers is", round(kilometers_to_miles, 2), "miles")
+
+
+x = float(-1)
+y = (3*(x**3)) - (2 * (x**2)) + (3 * x) - 1
+print("y =", y)
+
+# this program computes the number of seconds in a given number of hours
+# this program has been written two days ago
+
+a = 2  # number of hours
+seconds = 3600  # number of seconds in 1 hour
+
+print("Hours: ", a)  # printing the number of hours
+print("Hours in seconds: ", a * seconds) # printing the number of seconds in a given number of hours
+
+# here we should also print "Goodbye", but a programmer didn't have time to write any code
+print("Goodbye!")
+# this is the end of the program that computes the number of seconds in 2 hours
+
+
+
+
