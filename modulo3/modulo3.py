@@ -163,8 +163,8 @@ for expo in range(16):
 # import time
 
 # Write a for loop that counts to five.
-    # Body of the loop - print the loop iteration number and the word "Mississippi".
-    # Body of the loop - use: time.sleep(1)
+# Body of the loop - print the loop iteration number and the word "Mississippi".
+# Body of the loop - use: time.sleep(1)
 
 # Write a print function with the final message.
 # for count in range(1,6):
@@ -180,7 +180,6 @@ for i in range(1, 6):
         break
     print("Inside the loop.", i)
 print("Outside the loop.")
-
 
 # continue - example
 
@@ -429,7 +428,8 @@ print("Nosso bit é o quarto bit")
 flag_register = 0b01000010000111111000010001101000
 print(format(flag_register, '#b'))
 the_mask = 8
-print("Nossa máscara é 8, 2^3 representando a casa onde o bit se encontra - " + format(the_mask, '#b'))
+print("Nossa máscara é 8, 2^3 representando a casa onde o bit se encontra - " +
+      format(the_mask, '#b'))
 if flag_register & the_mask:
     print("My bit is set")
 else:
@@ -453,7 +453,6 @@ print("var shifted right 1 bit = " + format(var_right, '#b'))
 var_left = var << 2
 print("var shifted left 2 bita = " + format(var_left, '#b'))
 print(var, var_left, var_right)
-
 
 # E aqui está a tabela de prioridades atualizada, contendo todos os operadores introduzidos até agora:
 #
@@ -627,7 +626,6 @@ for i in range(length // 2):
 
 print(my_list)
 
-
 # # step 1
 # beatles = []
 # print("Step 1:", beatles)
@@ -657,3 +655,49 @@ print(my_list)
 
 # A lista é um tipo de dados em Python usada para armazenar vários objetos.
 # É uma coleção ordenada e mutável de ítens separados por vírgulas, entre parêntesis retos
+
+#bubblesort
+
+print("Bubble Sort")
+
+
+my_list = [8, 10, 6, 2, 4]
+
+swapped = True
+
+while swapped:
+  print(my_list)  
+  swapped = False
+  for i in range(len(my_list) - 1):
+    if my_list[i] > my_list[i + 1]:
+      swapped = True
+      my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+
+print(my_list)
+
+# my_list = []
+# swapped = True
+# num = int(input("How many elements do you want to sort: "))
+
+# for i in range(num):
+#     val = float(input("Enter a list element: "))
+#     my_list.append(val)
+
+# while swapped:
+#     swapped = False
+#     for i in range(len(my_list) - 1):
+#         if my_list[i] > my_list[i + 1]:
+#             swapped = True
+#             my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+
+# print("\nSorted: ")
+# print(my_list)
+
+print("Python native sort: ")
+my_list = [8,10,6,2,4]
+my_list.sort()
+print(my_list)
+
+print("Reverse list: ")
+my_list.reverse()
+print(my_list)
