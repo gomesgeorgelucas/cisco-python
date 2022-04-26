@@ -340,4 +340,3 @@ print("+" + 10 * "-" + "+")
 # mins_final = mins_correcao
 #
 # print(str(hora_final) + ":" + str(mins_final))
-
