@@ -374,3 +374,97 @@ for letter in text:
     if letter == "x":
         continue
     print(letter, end="")
+
+# not
+# Sua prioridade é muito alta: a mesma que o unário + e -
+# and
+# É um operador binário com uma prioridade que é inferior à expressa pelos operadores de comparação.
+# or
+# É um operador binário com uma prioridade inferior a and ( assim como + comparado com *).
+
+# Pode estar familiarizado com as leis de De Morgan. Dizem que:
+#
+# A negação de uma conjunção é a disjunção das negações.
+#
+# A negação de uma disjunção é a conjunção das negações.
+
+# not (p and q) == (not p) or (not q)
+# not (p or q) == (not p) and (not q)
+
+# Os operadores lógicos tomam os seus argumentos como um 'todo'
+# independentemente da quantidade de bits que contenham.
+# Os operadores só estão conscientes do valor:
+# zero (quando todos os bits são redefinidos) significa False;
+# não zero (quando pelo menos um bit está definido) significa True.
+print()
+
+i = 1
+j = not not i
+print(j)
+
+i = 0b101
+j = not not i
+print(j)
+
+i = 0b000
+j = not not i
+print(j)
+
+# Aqui estão todos eles:
+#
+# & (e comercial) - conjunção bitwise;
+# | (barra) - disjunção bitwise;
+# ~ (til) - negação bitwise;
+# ^ (acento circunflexo) - bitwise exclusive ou (xor).
+
+# Acrescentemos uma observação importante: os argumentos destes operadores devem ser inteiros;
+# não devemos utilizar floats aqui.
+#
+# A diferença no funcionamento dos operadores lógicos e de bit é importante:
+# os operadores lógicos não penetram no nível de bits do seu argumento.
+# Eles só estão interessados no valor inteiro final.
+
+# Negação binária utiliza complementos de dois
+print("Nosso bit é o quarto bit")
+flag_register = 0b01000010000111111000010001101000
+print(format(flag_register, '#b'))
+the_mask = 8
+print("Nossa máscara é 8, 2^3 representando a casa onde o bit se encontra - " + format(the_mask, '#b'))
+if flag_register & the_mask:
+    print("My bit is set")
+else:
+    print("My bit is not set")
+print("Atribui 0 ao bit fazendo a conjunção com a negação da máscara")
+flag_register &= ~the_mask
+print(format(flag_register, '#b'))
+print("Reatribui 1 ao bit fazendo a disjunção com a máscara")
+flag_register |= the_mask
+print(format(flag_register, '#b'))
+print("Utiliza o xor como switch 0 e 1")
+flag_register ^= the_mask
+print(format(flag_register, '#b'))
+flag_register ^= the_mask
+print(format(flag_register, '#b'))
+
+var = 17
+print("var = " + format(var, '#b'))
+var_right = var >> 1
+print("var shifted right 1 bit = " + format(var_right, '#b'))
+var_left = var << 2
+print("var shifted left 2 bita = " + format(var_left, '#b'))
+print(var, var_left, var_right)
+
+
+# E aqui está a tabela de prioridades atualizada, contendo todos os operadores introduzidos até agora:
+#
+# Prioridade	   Operador
+#       1	        ~, +, -         unário
+#       2	        **
+#       3	        *, /, //, %
+#       4	        +, -	        binário
+#       5	        <<, >>	        (bitwise)
+#       6	        <, <=, >, >=
+#       7	        ==, !=
+#       8	        &
+#       9	        |
+#       10	        =, +=, -=, *=, /=, %=, &=, ^=, |=, >>=, <<=
