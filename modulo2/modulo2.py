@@ -154,4 +154,56 @@ print(1 < False)
 print('"I\'m"\n""learning""\n"""Python"""')
 print(0b1011)
 
+# Operadores numéricos - +, -, *, /, //, %, **
 
+print(2+2)
+
+# Operações com flots vs integers sempre resultam em flots, exceto em divisão inteira de inteiros.
+
+print(2 ** 0b11)
+print(2 ** 3.)
+print(2. ** 3)
+print(2. ** 3.)
+
+print(2 * 3)
+print(2 * 3.)
+print(2. * 3)
+print(2. * 3.)
+
+print(6 / 3)
+print(6 / 3.)
+print(6. / 8)
+print(6. / 3.)
+
+print(6 // 3)
+print(6 // 3.)
+print(6. // 8)
+print(6. // 3.)
+
+# Isto é muito importante: o arredondamento vai sempre para o número inteiro menor.
+print(6 // 4)
+print(6. // 4)
+
+print(6 / 4)
+print(6. / 4)
+
+# Como o resultado é negativo, o resultado é pro negativo menor mais próximo.
+# Conhecida como floor division.
+print(-6 // 4)
+print(6. // -4)
+
+print(4 % 14)
+print(4 % -14)
+
+print(12 % 4.5)
+
+print(-4 + 4)
+print(-4. + 8)
+
+print(0.0 * -1)
+
+print(+2)
+
+# O resultado mostra claramente que o operador de exponenciação
+# utiliza a ligação do lado direito.
+print(2 ** 2 ** 3)
