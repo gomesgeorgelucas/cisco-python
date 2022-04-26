@@ -91,14 +91,14 @@ print("   ***********")
 # duplicar a seta, colocando ambas as setas lado a lado; nota:
 # uma ‘string’ pode ser multiplicada ao usar o seguinte truque:
 # "string" * 2 produzirá "stringstring" (brevemente, falaremos mais sobre o assunto)
-print("    *     "*2)
-print("   * *    "*2)
-print("  *   *   "*2)
-print(" *     *  "*2)
-print("***   *** "*2)
-print("  *   *   "*2)
-print("  *   *   "*2)
-print("  *****   "*2)
+print("    *     " * 2)
+print("   * *    " * 2)
+print("  *   *   " * 2)
+print(" *     *  " * 2)
+print("***   *** " * 2)
+print("  *   *   " * 2)
+print("  *   *   " * 2)
+print("  *****   " * 2)
 
 # Substitua algumas das aspas por apóstrofes; observe cuidadosamente o que acontece.
 # Atenção ao misturar aspas simples e duplas
@@ -115,7 +115,7 @@ print(11111111)
 # únicos entre dígitos e após especificadores de base para melhorar a legibilidade.
 # Este recurso não está disponível em versões mais antigas de Python.
 print(11_111_111)
-print(+11_111-11)
+print(+11_111 - 11)
 
 # octal (zero-o ou zero-O)
 print(0o123)
@@ -156,7 +156,7 @@ print(0b1011)
 
 # Operadores numéricos - +, -, *, /, //, %, **
 
-print(2+2)
+print(2 + 2)
 
 # Operações com flots vs integers sempre resultam em flots, exceto em divisão inteira de inteiros.
 
@@ -251,9 +251,8 @@ kilometers_to_miles = kilometers / 1.61
 print(miles, "miles is", round(miles_to_kilometers, 2), "kilometers")
 print(kilometers, "kilometers is", round(kilometers_to_miles, 2), "miles")
 
-
 x = float(-1)
-y = (3*(x**3)) - (2 * (x**2)) + (3 * x) - 1
+y = (3 * (x ** 3)) - (2 * (x ** 2)) + (3 * x) - 1
 print("y =", y)
 
 # this program computes the number of seconds in a given number of hours
@@ -263,12 +262,82 @@ a = 2  # number of hours
 seconds = 3600  # number of seconds in 1 hour
 
 print("Hours: ", a)  # printing the number of hours
-print("Hours in seconds: ", a * seconds) # printing the number of seconds in a given number of hours
+print("Hours in seconds: ", a * seconds)  # printing the number of seconds in a given number of hours
 
 # here we should also print "Goodbye", but a programmer didn't have time to write any code
 print("Goodbye!")
 # this is the end of the program that computes the number of seconds in 2 hours
 
+# print("Tell me anything...")
+# anything = input()
+# print("Hmm...", anything, "... Really?")
+#
+# anything = input("Tell me anything...")
+# print("Hmm...", anything, "...Really?")
+
+# anything = input("Enter a number: ")
+# something = anything ** 2.0
+# print(anything, "to the power of 2 is", something)
+
+# anything = float(input("Enter a number: "))
+# something = anything ** 2.0
+# print(anything, "to the power of 2 is", something)
+
+# leg_a = float(input("Input first leg length: "))
+# leg_b = float(input("Input second leg length: "))
+# hypo = (
+# print("Hypotenuse length is", (leg_a**2 + leg_b**2) ** .5))
+
+# fnam = input("May I have your first name, please? ")
+# lnam = input("May I have your last name, please? ")
+# print("Thank you.")
+# print("\nYour name is " + fnam + " " + lnam + ".")
+
+print("+" + 10 * "-" + "+")
+print(("|" + " " * 10 + "|\n") * 5, end="")
+print("+" + 10 * "-" + "+")
+
+# int(arg1) float(arg2) são os parsers de string e str(arg1) é o parser de números
+
+# leg_a = float(input("Input first leg length: "))
+# leg_b = float(input("Input second leg length: "))
+# print("Hypotenuse length is " + str((leg_a**2 + leg_b**2) ** .5))
+
+# # input a float value for variable a here
+# a = float(input("Input a: "))
+# # input a float value for variable b here
+# b = float(input("Input b: "))
+# # output the result of addition here
+# print(str(a+b))
+# # output the result of subtraction here
+# print(str(a-b))
+# # output the result of multiplication here
+# print(str(a*b))
+# # output the result of division here
+# print(str(a/b))
+
+# print("\nThat's all, folks!")
+#
+# x = float(input("X = "))
+# y = 1/(x + 1/(x + 1/(x + 1/x)))
+# print(str(y))
 
 
+# hour = int(input("Starting time (hours): "))
+# mins = int(input("Starting time (minutes): "))
+# dura = int(input("Event duration (minutes): "))
+#
+# dura_horas = dura // 60  # 10 h
+# dura_mins = dura % 60  # 42 min
+#
+# horas_acumuladas = hour + dura_horas  # 33
+# mins_acumulados = mins + dura_mins  # 100
+#
+# horas_correcao = mins_acumulados // 60  # 1
+# mins_correcao = mins_acumulados % 60  # 40
+#
+# hora_final = (horas_acumuladas + horas_correcao) % 24
+# mins_final = mins_correcao
+#
+# print(str(hora_final) + ":" + str(mins_final))
 
