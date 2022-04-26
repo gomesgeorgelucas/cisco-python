@@ -468,3 +468,192 @@ print(var, var_left, var_right)
 #       8	        &
 #       9	        |
 #       10	        =, +=, -=, *=, /=, %=, &=, ^=, |=, >>=, <<=
+
+#Listas
+
+# Os elementos dentro de uma lista podem ter tipos diferentes.
+# Alguns deles podem ser inteiros, outros floats, e outros ainda podem ser listas.
+
+numbers = [10, 5, 7, 2, 1]
+print("Original list content:", numbers)  # Printing original list content.
+
+numbers[0] = 111
+print("\nPrevious list content:", numbers)  # Printing previous list content.
+
+numbers[1] = numbers[4]  # Copying value of the fifth element to the second.
+print("New list content:", numbers)  # Printing current list content.
+
+print(numbers)  # Printing the whole list.
+
+# Se quiser verificar o comprimento atual da lista, pode usar uma função chamada len()
+# (o seu nome vem de length (comprimento)).
+#
+# A função toma o nome da lista como argumento, e devolve o número de elementos atualmente
+# armazenados dentro da lista (por outras palavras - o comprimento da lista).
+
+print(len(numbers))  # Printing the whole list.
+
+# Qualquer elemento da lista pode ser removido a qualquer momento
+# isto é feito com uma instrução chamada del (delete).
+# Nota: é uma instrução, não uma função.
+#
+# É preciso apontar o elemento a ser removido - desaparecerá da lista,
+# e o comprimento da lista será reduzido em um.
+
+del numbers[1]
+print(len(numbers))
+print(numbers)
+
+# Um elemento com um index igual a -1 é o último na lista.
+numbers = [111, 7, 2, 1]
+print(numbers[-1])
+print(numbers[-2])
+
+# hat_list = [1, 2, 3, 4, 5]  # This is an existing list of numbers hidden in the hat.
+#
+# # Step 1: write a line of code that prompts the user
+# # to replace the middle number with an integer number entered by the user.
+# new_number = int(input("New number to replace middle number: "))
+# hat_list[2] = new_number
+# # Step 2: write a line of code that removes the last element from the list.
+# del hat_list[-1]
+# # Step 3: write a line of code that prints the length of the existing list.
+# print(len(hat_list))
+# print(hat_list)
+
+# Funções vs. métodos
+# Um método é um tipo específico de função - comporta-se como uma função e parece uma função,
+# mas difere na forma como atua, e no seu estilo de invocação.
+#
+# Uma função não pertence a nenhum dado - recebe dados, pode criar novos dados
+# e (geralmente) produz um resultado.
+#
+# Um método faz todas estas coisas, mas também é capaz de alterar o estado de uma entidade selecionada.
+#
+# Um método é propriedade dos dados para os quais trabalha,
+# enquanto uma função é propriedade de todo o código.
+
+# result = function(arg) vs result = data.method(arg)
+
+# O método comportar-se-á como uma função, mas pode fazer algo mais
+# pode alterar o estado interno dos dados a partir dos quais foi invocado.
+
+# Adicionar elementos a uma lista (métodos): append(value) e insert(location, value)
+# location mostra a localização necessária do elemento a ser inserido;
+# nota: todos os elementos existentes que ocupam locais à direita do novo elemento
+# (incluindo o que se encontra na posição indicada) são deslocados para a direita,
+# a fim de criar espaço para o novo elemento;
+print("Append e Insert")
+numbers = [111, 7, 2, 1]
+print(len(numbers))
+print(numbers)
+
+###
+
+numbers.append(4)
+
+print(len(numbers))
+print(numbers)
+
+###
+
+numbers.insert(0, 222)
+print(len(numbers))
+print(numbers)
+
+#
+
+numbers.insert(1, 333)
+print(numbers)
+
+my_list = []  # Creating an empty list.
+
+for i in range(5):
+    my_list.append(i + 1)
+
+print(my_list)
+
+my_list = []  # Creating an empty list.
+
+for i in range(5):
+    my_list.insert(0, i + 1)
+
+print(my_list)
+
+my_list = [10, 1, 8, 3, 5]
+total = 0
+
+for i in range(len(my_list)):
+    total += my_list[i]
+
+print(total)
+
+my_list = [10, 1, 8, 3, 5]
+total = 0
+
+for i in my_list:
+    total += i
+
+print(total)
+
+# swap em Python
+
+variable_1 = 1
+variable_2 = 2
+
+auxiliary = variable_1
+variable_1 = variable_2
+variable_2 = auxiliary
+
+# swap otimizado
+
+variable_1 = 1
+variable_2 = 2
+
+variable_1, variable_2 = variable_2, variable_1
+
+my_list = [10, 1, 8, 3, 5]
+
+my_list[0], my_list[4] = my_list[4], my_list[0]
+my_list[1], my_list[3] = my_list[3], my_list[1]
+
+print(my_list)
+
+my_list = [10, 1, 8, 3, 5]
+length = len(my_list)
+
+for i in range(length // 2):
+    my_list[i], my_list[length - i - 1] = my_list[length - i - 1], my_list[i]
+
+print(my_list)
+
+
+# # step 1
+# beatles = []
+# print("Step 1:", beatles)
+#
+# # step 2
+# beatles.append("John Lennon")
+# beatles.append("Paul McCartney")
+# beatles.append("George Harrison")
+# print("Step 2:", beatles)
+#
+# # step 3
+# for new_member in range(2):
+#     beatles.append(input("New member: "))
+# print("Step 3:", beatles)
+# # step 4
+# del beatles[-1]
+# del beatles[-1]
+# print("Step 4:", beatles)
+#
+# # step 5
+# beatles.insert(0, "Ringo Starr")
+# print("Step 5:", beatles)
+#
+#
+# # testing list legth
+# print("The Fab", len(beatles))
+
+# A lista é um tipo de dados em Python usada para armazenar vários objetos.
+# É uma coleção ordenada e mutável de ítens separados por vírgulas, entre parêntesis retos
