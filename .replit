@@ -1,2 +1,3 @@
 language = "python3"
-run = "python3 ./modulo3/modulo3.py"
+entrypoint = "./src/modulo4/modulo4.py"
+run = "python3 ./modulo4/modulo4.py"
